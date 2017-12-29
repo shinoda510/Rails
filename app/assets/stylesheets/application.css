@@ -37,3 +37,9 @@ header{
 .go_top:hover{
     color:red;
 }
+
+.made_info{
+    font-size: 20px;
+    float: right;
+    margin-top:35px;
+}

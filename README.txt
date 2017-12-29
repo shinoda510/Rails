@@ -41,3 +41,6 @@
     gem 'sqlite3', group: :development
     gem 'pg', group: :production
     に書き換える(HerokuでSQliteが使えないため)
+    
+・assetsを変更したとき
+    rake assets:precompile RAILS_ENV=production
