@@ -16,7 +16,7 @@
  body{
      margin: 0px;
      margin-top: 80px;
-     font-family: 'Kaushan Script', cursive;
+     font-family: 'sans-serif';
  }
 header{
     color:snow;
@@ -27,7 +27,8 @@ header{
     top:0;
     left:0;
     background-color: gray;
-    text-align: center;
+    padding-left: 20px;
+    
 }
 .go_top{
     color: snow;

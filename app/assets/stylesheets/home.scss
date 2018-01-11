@@ -1,6 +1,8 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//------home------
 .list{
     font-size:30px;
     color:gray;
@@ -18,3 +20,43 @@
 p{
     font-size:30px;
 }
+
+//------Run_Away_rat------
+.list2{
+    background-color: white;
+    text-align: center;
+}
+
+#rat{
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 38px 0px;
+    border-radius: 50px;
+    margin: 100px;
+    position: relative;
+    top:100px;
+    right:100px;
+    left:100px;
+    bottom:100px;
+}
+
+#button_reset{
+    font-family: serif;
+    font-size: 30px;
+    width:100px;
+    text-align: center;
+    padding: 10px 0px; 
+    background-color: skyblue;
+    margin:50px;
+    border-radius: 30px;
+    box-shadow: 0px 5px blue;
+    cursor: pointer;
+}
+#button_reset:active{
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+

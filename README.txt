@@ -5,6 +5,10 @@
 
 
 ----基本操作----
+・gemの追加
+    Gemfileに新gemを記入
+    bundle install
+    
 ・git操作
     git add -A
     git commit -m "コメント"

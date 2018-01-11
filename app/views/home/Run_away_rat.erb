@@ -1,0 +1,54 @@
+<% content_for :title do %>
+Google Serach
+<%end%>
+<div class='Run_away_rat'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <div id="button_reset">Reset</div>
+    
+    <div id="rat">Rat</div>
+    
+    <script>
+        /* global $ */
+$(function(){
+    var $i = 30; 
+    var $posi = 0;
+    $('#rat').hover(
+        function(){
+            $posi = Math.floor( Math.random() * 4 ) ;
+            switch($posi){
+                case 0:
+                    $(this).css('position','relative');
+                    $(this).css('top',$i+'px');
+                    $i+=10;
+                    break
+                case 1:
+                    $(this).css('position','relative');
+                    $(this).css('left',$i+'px');
+                    $i+=10;
+                    break
+                case 2:
+                    $(this).css('position','relative');
+                    $(this).css('top',-$i+'px');
+                    $i+=10;
+                    break
+                case 3:
+                    $(this).css('position','relative');
+                    $(this).css('left',-$i+'px');
+                    $i+=10;
+                    break
+            }
+        },
+        function(){}
+        );
+        
+        $('#button_reset').click(
+            function(){
+               $('#rat').css('position','static');
+               $i = 30;
+            }
+            );
+});
+        
+    </script>
+
+</div>
