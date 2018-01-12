@@ -83,3 +83,70 @@ p{
     box-shadow: none;
 }
 
+//------Load action------
+.load_action{
+    position:relative;
+    text-align:center;
+    height:85vh;
+    &:before{
+        content:'Loading...';
+        z-index:1;
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        font-size:100px;
+        background-color:white;
+        transition:height 1s linear;
+    }
+    &:hover{
+        &:before{
+            height:0;
+            content:'';
+        }
+    }
+    
+    .action1{
+        transition:color 1s ;
+    
+        &:hover{
+            color:rgba(0,0,0,0);
+        }
+    }
+    
+    .action2{
+        position: relative;
+        width:200px;
+        margin-left:auto;
+        margin-right:auto;
+        
+        span{
+            display:block;
+            position: absolute;
+            top:0;
+            left:0;
+            background-color:blue;
+            width:100%;
+            height:100%;
+        }
+            &:before{
+                content:'';
+                display:block;
+                z-index:-1;
+                position:absolute;
+                top:0;
+                left:0px;
+                background-color:skyblue;
+                width:0;
+                height:100%;
+                transition:width 1.5s linear;
+            }
+        &:hover{
+            &:before{
+            width:100%;
+            }
+        }
+    }
+        
+}
