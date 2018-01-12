@@ -20,6 +20,29 @@
 p{
     font-size:30px;
 }
+ //------about------
+ .about_main{
+
+ }
+ .move1{
+     font-size:30px;
+     height:auto;
+     width:250px;
+     margin:auto;
+     background-color:skyblue;
+     transition:color 3s ease 0s ;
+     transition:background-color 3s ease 0s ;
+     transition:width 3s ease 0s ;
+     transition:height 3s ease 0s ;
+     transition:font-size 3s ease 0s ;
+     border-radius: 50px;
+     &:hover{
+         height:auto;
+         width:500px;
+         color:red;
+         font-size:500px;
+     }
+ }
 
 //------Run_Away_rat------
 .list2{
