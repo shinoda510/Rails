@@ -15,7 +15,7 @@
  */
  body{
      margin: 0px;
-     margin-top: 80px;
+     margin-top: 15vh;
      font-family: 'sans-serif';
  }
 header{
@@ -40,7 +40,9 @@ header{
 }
 
 .made_info{
+    display: inline;
     font-size: 20px;
-    float: right;
-    margin-top:35px;
+    position: absolute;
+    bottom: 5px;
+    right:30px;
 }

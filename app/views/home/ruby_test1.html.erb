@@ -1,0 +1,56 @@
+<% content_for :title do %>
+Ruby Test1
+<%end%>
+
+<div style="text-align:center">
+    <div id="button" style="display:inline">change text</div></br>
+    <input id="moji" type="text" placeholder="ここに検索テキストを入力" style="width:300px;height:20px;" value=""/>
+    </br>
+    <p style="font-size:20px">formの中身をGoogle検索してリスト表示したかったけど</br>
+    コントローラーの引数に値を渡す方法がわからなかった</br>
+    あと&amp;quot;の消し方も</br>
+    コントローラーに書いてたメソッドが急に読み込まれなくなったのでscriptに持ってきた</p>
+    <p id="change_text">before text</p>
+
+    
+</div>
+
+
+<script>
+    $(function(){
+        $('#button').hover(
+            function(){$(this).css({'color':'red','cursor':'pointer','border-bottom':'solid 2px red'});},
+            function(){$(this).css({'color':'','border':''})}
+            );
+    //-------------------------------------------
+    <%
+    def google_seach
+    require 'mechanize'
+
+    agent = Mechanize.new
+    agent.user_agent_alias = 'Mac Safari 4'
+    page = agent.get('https://www.google.co.jp/')
+
+    form = page.form_with(action:'/search')
+    form.field_with(name:'q').value = 'マリオ'
+        
+    next_page = agent.submit(form)
+    @lists = []
+    i=0
+    next_page.search("//h3[@class='r']").each do |list|
+      @lists[i] = list.text.to_s
+      i+=1
+    end
+  end
+    %>
+        //-------------------------------------------
+    });
+
+    $('#button').on('click',function(){
+        alert($('#moji').val());
+        <% google_seach %>
+        $('#change_text').text("<%= @lists %>");
+    });
+    
+    
+</script>

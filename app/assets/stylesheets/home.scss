@@ -9,7 +9,6 @@
     
     .list_link{
           text-decoration: none;
-          color:gray;
           &:hover{
              color:orange; 
              font-size:35px;
@@ -89,21 +88,22 @@ p{
     text-align:center;
     height:85vh;
     &:before{
-        content:'Loading...';
+        content:'閉店ガラガラ';
         z-index:1;
+        background-color:black;
         position:absolute;
         top:0;
         left:0;
         width:100%;
         height:100%;
+        color:white;
         font-size:100px;
-        background-color:white;
-        transition:height 1s linear;
+        transition: height 1s linear,color 1s ease 0.5s;
     }
     &:hover{
         &:before{
-            height:0;
-            content:'';
+            height:0%;
+            color:rgba(0,0,0,0);
         }
     }
     
@@ -117,7 +117,8 @@ p{
     
     .action2{
         position: relative;
-        width:200px;
+        height:50px;
+        width:150px;
         margin-left:auto;
         margin-right:auto;
         
@@ -126,27 +127,77 @@ p{
             position: absolute;
             top:0;
             left:0;
-            background-color:blue;
             width:100%;
             height:100%;
+            z-index:3;
         }
             &:before{
                 content:'';
                 display:block;
-                z-index:-1;
+                z-index:1;
                 position:absolute;
                 top:0;
-                left:0px;
+                left:0;
                 background-color:skyblue;
                 width:0;
                 height:100%;
-                transition:width 1.5s linear;
+                transition:width 0.5s linear 0.5s;
+            }
+            &:after{
+                content:'';
+                display:block;
+                z-index:2;
+                position:absolute;
+                top:0;
+                left:0;
+                background-color:red;
+                width:0;
+                height:100%;
+                transition:width 0.5s linear;
             }
         &:hover{
+            cursor:pointer;
             &:before{
             width:100%;
+            transition:width 0.5s linear;
+            }
+            &:after{
+            width:100%;
+            transition:width 0.5s linear 0.5s;
             }
         }
     }
+    
+    .action3{
+        position:relative;
+        top:0;
+        left:0;
+        transition: 1s;
+        color:red;
+        &:hover{
+            cursor:pointer;
+        }
+        &:active{
+            top:300px;
+            color:blue;
+        }
+    }
+    
+    .natto{
+        height:100px;
+        width:100px;
+        position:relative;
+        top:0;
+        left:-300px;
+        transition:3s;
+    
+        &:hover{
+        left:300px;
+        height:200px;
+        width:200px;
+    }
+    }
+        
+        
         
 }
